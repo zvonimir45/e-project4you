@@ -1,0 +1,61 @@
+<% provide(:title, "Show Event") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Show Event No. <%= @event.id %></h2>
+
+  <div class="wrapper-show">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @event.phase %>
+</p>
+
+<p>
+  <strong>Agenda:</strong>
+  <%= @event.agenda %>
+</p>
+
+<p>
+  <strong>Chairmen:</strong>
+  <%= @event.chairmen %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @event.term %>
+</p>
+
+<p>
+  <strong>Annex url:</strong>
+  <%= @event.annex_url %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @event.appointment %>
+</p>
+
+  <div>
+    <%= link_to 'Edit Event', edit_event_path(@event), type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Events List', events_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

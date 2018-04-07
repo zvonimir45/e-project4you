@@ -1,0 +1,55 @@
+<%= form_with(model: @idea, local: true) do |form| %>
+  <% if @idea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+
+      <ul>
+      <% @idea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :idea_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summary %><br />
+    <%= form.text_area :summary, cols: "60", rows: "15", id: :idea_summary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.select :kind, (["Website", "Application", "Game", "Real World", "Combination"]), id: :idea_kind  %>
+    <%= form.label :category %>
+    <%= form.select :category, (["Research", "Engineering", "Medicine", "Law", "Economy", 
+      "Education", "Service", "Errand", "Entertainment"]), id: :idea_caregory %>
+    <%= form.label :phase %>
+    <%= form.select :phase, (["Demand", "Definition", "Development", "Feasibility", 
+      "Assignement", "Reference"]), id: :idea_phase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inventor %>
+    <%= form.text_field :inventor, id: :idea_inventor %>
+    <%= form.label :invented %>
+    <%= form.date_select :invented, id: :idea_invented %>
+  </div>
+
+  <div class="field">
+    <%= form.label :necessary_budget %>
+    <%= form.text_field :necessary_budget, size: "30", id: :idea_necessary_budget %>
+  </div>
+
+  <div class="field">
+    <%= form.label :annex_url %>
+    <%= form.text_field :annex_url, id: :idea_annex_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-defaut" %>
+  </div>
+<% end %>

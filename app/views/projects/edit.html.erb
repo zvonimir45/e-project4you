@@ -1,0 +1,17 @@
+<% provide(:title, "Edit Project") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>Editing Project No. <%= @project.id %></h1>
+
+  <%= render 'form', project: @project %>
+
+  <div>
+    <%= link_to 'Show Project', @project, type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Projects List', projects_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

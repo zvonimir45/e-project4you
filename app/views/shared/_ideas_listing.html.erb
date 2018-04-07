@@ -1,0 +1,36 @@
+<% @ideas.each do |idea| %>
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><%= idea.name %><span><%= idea.kind %>
+          </span></h4>
+      </div>
+      <div class="panel-body">
+        <p><b><%= idea.phase %></b><span>
+        <button type="button" class="btn btn-info btn-xs pull-right" style="margin-top: 0;"
+          data-toggle="modal" data-target="#idea<%= idea.id %>">Details</button></span>           
+        <div id="idea<%= idea.id %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><%= idea.name %>, <%= idea.category %></h4>
+              </div>
+              <div class="modal-body">
+                <p><b>Idea: </b><%= markdown(idea.summary) %></p>
+                <p><b>Inventor: </b><%= idea.inventor %></p>
+                <p><b>Invented: </b><%= idea.invented %></p>
+             </div>
+              <div class="modal-footer">
+                <a href="ideas/<%= idea.annex_url %>" target="_blank" class="btn btn-default" role="button">Annex</a>
+                <a href="ideas/project.dotx" class="btn btn-default btn-xs" role="button">Download Form</a>
+                <a href="mailto:zvonimir.kolumbic1@ri.t-com.hr?Subject=Annex%20title:%20..." class="btn btn-default btn-xs" role="button">email Annex</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

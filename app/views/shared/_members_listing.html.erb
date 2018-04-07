@@ -1,0 +1,35 @@
+<% @members.each do |member| %>
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><%= member.first_name %> <%= member.second_name %></h4>
+      </div>
+      <div class="panel-body">
+        <p><b><%= member.kind %></b><span>
+        <button type="button" class="btn btn-info btn-xs pull-right" style="margin-top: 0;"
+          data-toggle="modal" data-target="#member<%= member.id %>">Details</button></span>           
+        <div id="member<%= member.id %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><%= member.first_name %>, <%= member.category %></h4>
+              </div>
+              <div class="modal-body">
+                <p><b>Details: </b><%= markdown(member.summary) %></p>
+                <p><b>Location: </b><%= member.location %></p>
+                <p><b>Joined: </b><%= member.joined %></p>
+             </div>
+              <div class="modal-footer">
+                <a href="members/<%= member.details_url %>" target="_blank" class="btn btn-default" role="button">Annex</a>
+                <a href="members/project.dotx" class="btn btn-default btn-xs" role="button">Download Form</a>
+                <a href="mailto:zvonimir.kolumbic1@ri.t-com.hr?Subject=Annex%20title:%20..." class="btn btn-default btn-xs" role="button">email Annex</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

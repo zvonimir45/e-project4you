@@ -1,0 +1,13 @@
+<% provide(:title, "New Project") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>New Project</h1>
+
+  <%= render 'form', project: @project %>
+
+  <%= link_to 'Project List', projects_path,  type: "button",
+    class: "btn btn-primary btn-xs" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

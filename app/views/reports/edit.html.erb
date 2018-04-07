@@ -1,0 +1,21 @@
+<% provide(:title, "Edit Report") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>Editing Report No. <%= @report.id %></h1>
+
+  <%= render 'form', report: @report %>
+
+  <div>
+    <%= link_to 'Show report', @report, type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Reports List', reports_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br />
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->
+
+

@@ -1,0 +1,66 @@
+<% provide(:title, "Show Idea") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Show Idea No. <%= @idea.id %></h2>
+
+  <div class="wrapper-show">
+
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Name:</strong>
+    <%= @idea.name %>
+  </p>
+  
+  <p>
+    <strong>Summary:</strong>
+    <%= markdown(@idea.summary) %>
+  </p>
+
+  <p>
+    <strong>Kind:</strong>
+    <%= @idea.kind %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= @idea.category %>
+  </p>
+  
+  <p>
+    <strong>Phase:</strong>
+    <%= @idea.phase %>
+  </p>
+
+  <p>
+    <strong>Inventor:</strong>
+    <%= @idea.inventor %>
+  </p>
+  
+  <p>
+    <strong>Invented:</strong>
+    <%= @idea.invented %>
+  </p>
+  
+  <p>
+    <strong>Necessary budget:</strong>
+    <%= @idea.necessary_budget %>
+  </p>
+  
+  <p>
+    <strong>Annex url:</strong>
+    <%= @idea.annex_url %>
+  </p>
+
+  <div>
+    <%= link_to 'Edit Idea', edit_idea_path(@idea), type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Ideas List', ideas_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

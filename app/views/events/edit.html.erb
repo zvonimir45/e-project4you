@@ -1,0 +1,17 @@
+<% provide(:title, "Edit Event") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>Editing event No. <%= @event.id %></h1>
+
+  <%= render 'form', event: @event %>
+
+  <div>
+    <%= link_to 'Show Event', @event, type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Events List', events_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

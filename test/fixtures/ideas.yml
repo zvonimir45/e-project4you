@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  summary: MyText
+  kind: MyString
+  category: MyString
+  phase: MyString
+  inventor: MyString
+  invented: 2017-12-19
+  necessary_budget: MyString
+  annex_url: MyString
+
+two:
+  name: MyString
+  summary: MyText
+  kind: MyString
+  category: MyString
+  phase: MyString
+  inventor: MyString
+  invented: 2017-12-19
+  necessary_budget: MyString
+  annex_url: MyString

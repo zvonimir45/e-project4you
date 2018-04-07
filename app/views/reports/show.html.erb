@@ -1,0 +1,64 @@
+<% provide(:title, "Show Report") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Show report No. <%= @report.id %></h2>
+
+  <div class="wrapper-show">
+
+<p>
+  <strong>Name:</strong>
+  <%= @report.name %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @report.author %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @report.category %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @report.level %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @report.summary %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @report.keywords %>
+</p>
+
+<p>
+  <strong>Full text url:</strong>
+  <%= @report.full_text_url %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @report.published %>
+</p>
+
+<p>
+  <strong>Author detais url:</strong>
+  <%= @report.author_detais_url %>
+</p>
+
+  <div>
+    <%= link_to 'Edit Report', edit_report_path(@report), type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Reports List', reports_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

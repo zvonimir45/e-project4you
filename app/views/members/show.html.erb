@@ -1,0 +1,102 @@
+<% provide(:title, "Show Member") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Show Member No. <%= @member.id %></h2>
+
+  <div class="wrapper-show">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @member.first_name %>
+</p>
+
+<p>
+  <strong>Second name:</strong>
+  <%= @member.second_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @member.title %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @member.image_url %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @member.kind %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @member.category %>
+</p>
+
+<p>
+  <strong>Nick name:</strong>
+  <%= @member.nick_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @member.email %>
+</p>
+
+<p>
+  <strong>Skype name:</strong>
+  <%= @member.skype_name %>
+</p>
+
+<p>
+  <strong>Authorization level:</strong>
+  <%= @member.authorization_level %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @member.location %>
+</p>
+
+<p>
+  <strong>Joined:</strong>
+  <%= @member.joined %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @member.summary %>
+</p>
+
+<p>
+  <strong>Details url:</strong>
+  <%= @member.details_url %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @member.password_digest %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @member.visible %>
+</p>
+
+</div>
+  <div>
+    <%= link_to 'Edit Member', edit_member_path(@member), type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Members List', members_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

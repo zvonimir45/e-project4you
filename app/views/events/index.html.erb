@@ -1,0 +1,55 @@
+<% provide(:title, "Events List") %>
+<div class="container-fluid" id="main">
+<div class="row">
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Events</h1>
+
+  <%= link_to 'New Event', new_event_path,  type: "button",
+  class: "btn btn-xs", style: "margin: 0 0 10px 10px;" %>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-responsive">
+      <thead>
+        <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Agenda</th>
+      <th>Phase</th>
+      <th>Chairmen</th>
+      <th>Term</th>
+      <th>Annex url</th>
+      <th>Appointment</th>
+      <th>No</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.id %></td>
+        <td><%= event.name %></td>
+        <td><%= event.location %></td>
+        <td><%= event.phase %></td>
+        <td><%= event.agenda %></td>
+        <td><%= event.chairmen %></td>
+        <td><%= event.term %></td>
+        <td><%= event.annex_url %></td>
+        <td><%= event.appointment %></td>
+        <td><%= event.id %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+    </table>
+  </div> <!-- class="table-responsive" --> 
+
+  <%= link_to 'New Event', new_event_path,  type: "button",
+  class: "btn btn-xs", style: "margin: 0 0 20px 10px;" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

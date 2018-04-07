@@ -1,0 +1,13 @@
+<% provide(:title, "New Event") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>New Event</h1>
+
+  <%= render 'form', event: @event %>
+
+  <%= link_to 'Event List', events_path,  type: "button",
+    class: "btn btn-primary btn-xs" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

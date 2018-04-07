@@ -1,0 +1,48 @@
+<%= form_with(model: event, local: true) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, id: :event_name %>
+    <%= f.label :location %>
+    <%= f.text_field :location, id: :event_location %>
+    <%= f.label :phase %>
+    <%= f.select :phase, (["Hot", "Future", "Finished"]), id: :event_phase %>
+  <div>
+
+  <div class="field">
+    <%= f.label :agenda %>
+    <%= f.text_area :agenda, cols: "40", rows: "10", id: :event_agenda %>
+  </div>
+
+  <div class="field">
+    <%= f.label :chairmen %>
+    <%= f.text_field :chairmen, id: :event_chairmen %>
+    <%= f.label :term %>
+    <%= f.datetime_select :term, id: :event_term %>
+  </div>
+
+  <div class="field">
+    <%= f.label :annex_url %>
+    <%= f.text_field :annex_url, id: :event_annex_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :appointment %>
+    <%= f.text_field :appointment, id: :event_appointment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-defaut" %>
+  </div>
+<% end %>

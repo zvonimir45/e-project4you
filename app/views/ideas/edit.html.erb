@@ -1,0 +1,17 @@
+<% provide(:title, "Edit Idea") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>Editing Idea No. <%= @idea.id %></h1>
+
+  <%= render 'form', idea: @idea %>
+
+  <div>
+    <%= link_to 'Show Idea', @idea, type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Ideas List',ideas_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

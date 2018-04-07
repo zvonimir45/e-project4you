@@ -1,0 +1,88 @@
+<% provide(:title, "Show Project") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Show Project No. <%= @project.id %></h2>
+
+  <div class="wrapper-show">
+
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Name:</strong>
+    <%= @project.name %>
+  </p>
+  
+  <p>
+    <strong>Started at:</strong>
+    <%= @project.started_at %>
+  </p>
+  
+  <p>
+    <strong>Started in:</strong>
+    <%= @project.Started_in %>
+  </p>
+  
+  <p>
+    <strong>Summary:</strong>
+    <%= markdown(@project.summary) %>
+  </p>
+
+  </p>
+  
+  <p>
+    <strong>Phase:</strong>
+    <%= @project.phase %>
+  </p>
+  
+  <p>
+    <strong>Kind:</strong>
+    <%= @project.kind %>
+  </p>
+  
+  <p>
+    <strong>Category:</strong>
+    <%= @project.category %>
+  </p>
+  
+  <p>
+    <strong>Ceo:</strong>
+    <%= @project.ceo %>
+  </p>
+  
+  <p>
+    <strong>Staff:</strong>
+    <%= @project.staff %>
+  </p>
+  
+  <p>
+    <strong>Investor:</strong>
+    <%= @project.investor %>
+  </p>
+  
+  <p>
+    <strong>Budget:</strong>
+    <%= @project.budget %>
+  </p>
+  
+  <p>
+    <strong>Deadline:</strong>
+    <%= @project.deadline %>
+  </p>
+  
+  <p>
+    <strong>Annex url:</strong>
+    <%= @project.annex_url %>
+  </p>
+  
+  <div>
+    <%= link_to 'Edit Project', edit_project_path(@project), type: "button", 
+      class: "btn btn-xs" %>
+    <%= link_to 'Projects List', projects_path, type: "button",
+      class: "btn btn-xs" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

@@ -1,0 +1,138 @@
+<div class="container-fluid" id="main">
+
+<div class="row">    
+  <h3>Ideas</h3>
+  <% @ideas = Idea.all %>
+  <%= render 'shared/ideas_listing' %>
+</div> <!-- row -->
+
+<div class="row">    
+  <h3>Projects</h3>
+  <% @projects = Project.all %>
+  <%= render 'shared/projects_listing' %>
+</div> <!-- row -->
+
+<div class="row" style="margin-top: 15px;">
+
+  <div class="col-md-3 hidden-sm hidden-xs">
+    <div class="panel panel-default">
+      <div class="panel-body" style="padding: 10px; background-color: #D3AE15; 
+        color: #001a15;">
+        <h2 style="margin-top: 5px; font-weight: bold">Hi</h2>
+          <p style="font-size: 1.5em;">This is only the placeholder of the website 
+          <strong>eProject4you</strong>. Anyone who wants to join to the staff members is welcome. 
+          <br><br> 
+          <b>Admin: </b>
+          <a href="mailto:zvonimir.kolumbic1@ri.t-com.hr">Zvonimir Kolumbic</a>.
+          </p>
+      </div>
+    </div>
+  </div> <!-- Greeting col -->
+
+    <div class="col-md-6" style="margin-bottom: 15px;">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="assets/ivandolacw.jpg" alt="Ivan Dolac" width="460" height="345">
+          </div>
+    
+          <div class="item">
+            <img src="assets/skopjew.jpg" alt="Skopje" width="460" height="345">
+          </div>
+        
+          <div class="item">
+            <img src="assets/novisadw.jpg" alt="Novi Sad" width="460" height="345">
+          </div>
+    
+          <div class="item">
+            <img src="assets/rijekaw.jpg" alt="Rijeka" width="460" height="345">
+          </div>
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div> <!-- Carusel col -->
+
+  <div class="col-md-3 hidden-sm hidden-xs">
+    <div class="panel panel-default">
+      <div class="panel-body" style="padding: 10px; background-color: #D3AE15; 
+        color: #001a15;">
+        <h2 style="margin-top: 5px; font-weight: bold">Invitation</h2>
+        <div style="font-size: 1.2em;">
+        <p>If you join us, you can: <br>
+        (a) <strong>learn</strong> from experts, or <br> 
+        (b) <strong>teach</strong> the beginners, <br>
+        codding: <strong>HTML, CSS, JavaScript, Bootstrap, Ruby on Rails</strong>.</p>
+        <p>In this phase of the eProjet4You development all is free of charge.</p>
+        <p><b>Admin: </b><a href="mailto:zvonimir.kolumbic1@ri.t-com.hr">Zvonimir Kolumbic</a></p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Invitation col -->
+
+</div> <!-- Greeting Carusel Invitation row -->
+
+<div class="row">    
+  <h3>Reports</h3>
+  <% @reports = Report.all %>
+  <%= render 'shared/reports_listing' %>
+</div> <!-- row -->
+
+<div class="row">
+    <div class="col-lg-3 col-sm-6 col-xs-12" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/h3ruZwwpbgk?1&loop=1&playlist=h3ruZwwpbgk" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/7qwY7MGwpXc?1&loop=1&playlist=7qwY7MGwpXc" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/TyHvyGVs42U?1&loop=1&playlist=TyHvyGVs42U" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/bGenWxqIetQ?1&loop=1&playlist=bGenWxqIetQ" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+</div> <!-- row -->
+
+
+<div class="row">    
+  <h3>Members</h3>
+  <% @members = Member.all %>
+  <%= render 'shared/members_listing' %>
+</div> <!-- row -->
+
+<div class="row">    
+  <h3>Events</h3>
+  <% @events = Event.all %>
+  <%= render 'shared/events_listing' %>
+</div> <!-- row -->
+
+</div> <!-- container-fluid main -->

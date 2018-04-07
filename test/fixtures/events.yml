@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  agenda: MyText
+  chairmen: MyString
+  term: 2017-12-02 12:27:24
+  annex_url: MyString
+  appointment: MyString
+
+two:
+  name: MyString
+  location: MyString
+  agenda: MyText
+  chairmen: MyString
+  term: 2017-12-02 12:27:24
+  annex_url: MyString
+  appointment: MyString

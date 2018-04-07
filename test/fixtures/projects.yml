@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  started_at: 2017-12-01
+  Started_in: MyString
+  summary: MyText
+  phase: MyString
+  kind: MyString
+  category: MyString
+  ceo: MyString
+  staff: 1
+  investor: MyString
+  budget: MyString
+  deadline: 2017-12-01
+  annex_url: MyString
+
+two:
+  name: MyString
+  started_at: 2017-12-01
+  Started_in: MyString
+  summary: MyText
+  phase: MyString
+  kind: MyString
+  category: MyString
+  ceo: MyString
+  staff: 1
+  investor: MyString
+  budget: MyString
+  deadline: 2017-12-01
+  annex_url: MyString

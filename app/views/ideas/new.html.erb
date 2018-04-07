@@ -1,0 +1,13 @@
+<% provide(:title, "New Idea") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>New Idea</h1>
+
+  <%= render 'form', Idea: @idea %>
+
+  <%= link_to 'Idea List', ideas_path,  type: "button",
+    class: "btn btn-primary btn-xs" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

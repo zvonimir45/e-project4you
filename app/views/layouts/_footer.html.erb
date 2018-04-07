@@ -1,0 +1,28 @@
+<div class="container-fluid" id="footer">
+
+<div class="row">
+<hr>
+  <div class="pull-left">
+    <%= link_to "Home", root_path, class: "btn btn-xs" %>
+    <%= link_to "About", about_path, class: "btn btn-xs" %>
+    <%= link_to "Help", help_path, class: "btn btn-xs" %>
+    <%= link_to "Sitemap", sitemap_path, class: "btn btn-xs" %>
+    <%= link_to "Staff", staff_path, class: "btn btn-xs" %>
+    <%= link_to "Contacts", contact_path, class: "btn btn-xs" %>
+    <%= link_to "Members", members_path, class: "btn btn-xs" %>
+    <%= link_to "Links", links_path, class: "btn btn-xs" %>
+  </div> <!-- pull-left -->
+  <div class="nav navbar-brand pull-right">
+    <%= link_to "Project", root_path %>
+    <%= link_to image_tag("bulbeoff.jpg", alt: "I have Idea", 
+        onmouseover: "this.src='assets/bulber.jpg';", 
+        onmouseout: "this.src='assets/bulbeoff.jpg';"), root_path %>
+  </div>
+</div> <!-- row -->
+
+<div class="row">
+ <hr>
+ <p>Ivan Dolac, 2018</p>  
+</div> <!-- row -->
+
+</div> <!-- container-fluid footer -->

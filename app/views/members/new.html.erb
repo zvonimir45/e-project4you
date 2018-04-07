@@ -1,0 +1,14 @@
+<% provide(:title, "New Member") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h1>New Member</h1>
+
+  <%= render 'form', member: @member %>
+
+  <%= link_to 'Member List', members_path,  type: "button",
+    class: "btn btn-primary btn-xs" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->
+

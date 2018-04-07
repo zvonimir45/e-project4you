@@ -1,0 +1,36 @@
+<% @reports.each do |report| %>
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><%= report.name %><span><%= report.author %>
+          </span></h4>
+      </div>
+      <div class="panel-body">
+        <p><b><%= report.category %></b><span>
+        <button type="button" class="btn btn-info btn-xs pull-right" style="margin-top: 0;"
+          data-toggle="modal" data-target="#report<%= report.id %>">Details</button></span>           
+        <div id="report<%= report.id %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><%= report.name %>, <%= report.category %></h4>
+              </div>
+              <div class="modal-body">
+                <p><b>Summary: </b><%= markdown(report.summary) %></p>
+                <p><b>Keywords: </b><%= report.keywords %></p>
+                <p><b>Published: </b><%= report.published %></p>
+             </div>
+              <div class="modal-footer">
+                <a href="reports/<%= report.author_detais_url %>" target="_blank" class="btn btn-default" role="button">Annex</a>
+                <a href="reports/project.dotx" class="btn btn-default btn-xs" role="button">Download Form</a>
+                <a href="mailto:zvonimir.kolumbic1@ri.t-com.hr?Subject=Annex%20title:%20..." class="btn btn-default btn-xs" role="button">email Annex</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
