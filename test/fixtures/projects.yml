@@ -3,7 +3,7 @@
 one:
   name: MyString
   started_at: 2017-12-01
-  Started_in: MyString
+  started_in: MyString
   summary: MyText
   phase: MyString
   kind: MyString
@@ -18,7 +18,7 @@ one:
 two:
   name: MyString
   started_at: 2017-12-01
-  Started_in: MyString
+  started_in: MyString
   summary: MyText
   phase: MyString
   kind: MyString

@@ -17,7 +17,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project" do
     assert_difference('Project.count') do
-      post projects_url, params: { project: { Started_in: @project.Started_in, annex_url: @project.annex_url, budget: @project.budget, category: @project.category, ceo: @project.ceo, deadline: @project.deadline, investor: @project.investor, kind: @project.kind, name: @project.name, phase: @project.phase, staff: @project.staff, started_at: @project.started_at, summary: @project.summary } }
+      post projects_url, params: { project: { Started_in: @project.started_in, annex_url: @project.annex_url, budget: @project.budget, category: @project.category, ceo: @project.ceo, deadline: @project.deadline, investor: @project.investor, kind: @project.kind, name: @project.name, phase: @project.phase, staff: @project.staff, started_at: @project.started_at, summary: @project.summary } }
     end
 
     assert_redirected_to project_url(Project.last)
@@ -34,7 +34,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update project" do
-    patch project_url(@project), params: { project: { Started_in: @project.Started_in, annex_url: @project.annex_url, budget: @project.budget, category: @project.category, ceo: @project.ceo, deadline: @project.deadline, investor: @project.investor, kind: @project.kind, name: @project.name, phase: @project.phase, staff: @project.staff, started_at: @project.started_at, summary: @project.summary } }
+    patch project_url(@project), params: { project: { Started_in: @project.started_in, annex_url: @project.annex_url, budget: @project.budget, category: @project.category, ceo: @project.ceo, deadline: @project.deadline, investor: @project.investor, kind: @project.kind, name: @project.name, phase: @project.phase, staff: @project.staff, started_at: @project.started_at, summary: @project.summary } }
     assert_redirected_to project_url(@project)
   end
 

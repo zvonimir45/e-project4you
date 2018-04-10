@@ -14,7 +14,7 @@
         <tr>
           <th>No</th>
           <th>Name</th>
-          <th>Summary</th>
+<!--            <th>Summary</th> -->
           <th>Kind</th>
           <th>Category</th>
           <th>Phase</th>
@@ -32,7 +32,7 @@
           <tr>
             <td><%= idea.id %></td>
             <td><%= idea.name %></td>
-            <td><%= idea.summary %></td>
+<!--            <td><%#= idea.summary %></td> -->
             <td><%= idea.kind %></td>
             <td><%= idea.category %></td>
             <td><%= idea.phase %></td>
@@ -51,7 +51,7 @@
   </div> <!-- class="table-responsive" --> 
 
   <%= link_to 'New Idea', new_idea_path,  type: "button",
-  class: "btn btn-xs", style: "margin: 0 0 20px 10px;" %>
+  class: "btn btn-xs", style: "margin: 10px 0 20px 10px;" %>
 
 </div>  <!-- row -->
 </div> <!-- container-fluid -->

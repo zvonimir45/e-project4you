@@ -3,7 +3,6 @@ class CreateProjects < ActiveRecord::Migration[5.1]
     create_table :projects do |t|
       t.string :name
       t.date :started_at
-      t.string :Started_in
       t.text :summary
       t.string :phase
       t.string :kind

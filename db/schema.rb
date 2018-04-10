@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180407192155) do
+ActiveRecord::Schema.define(version: 20180410205917) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 20180407192155) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.date "started_at"
-    t.string "Started_in"
     t.text "summary"
     t.string "phase"
     t.string "kind"
@@ -76,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180407192155) do
     t.string "annex_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "started_in"
   end
 
   create_table "reports", force: :cascade do |t|

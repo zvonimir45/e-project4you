@@ -16,7 +16,7 @@
           <th>Name</th>
           <th>Started at</th>
           <th>Started in</th>
-          <th>Summary</th>
+<!--          <th>Summary</th>  -->
           <th>Phase</th>
           <th>Kind</th>
           <th>Category</th>
@@ -37,8 +37,8 @@
             <td><%= project.id %></td>
             <td><%= project.name %></td>
             <td><%= project.started_at %></td>
-            <td><%= project.Started_in %></td>
-            <td><%= project.summary %></td>
+            <td><%= project.started_in %></td>
+<!--            <td><%#= project.summary %></td> -->
             <td><%= project.phase %></td>
             <td><%= project.kind %></td>
             <td><%= project.category %></td>
@@ -59,7 +59,7 @@
   </div> <!-- class="table-responsive" --> 
 
   <%= link_to 'New Project', new_project_path,  type: "button",
-  class: "btn btn-xs", style: "margin: 0 0 20px 10px;" %>
+  class: "btn btn-xs", style: "margin: 10px 0 20px 10px;" %>
 
 </div>  <!-- row -->
 </div> <!-- container-fluid -->
